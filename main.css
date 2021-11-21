@@ -1,7 +1,15 @@
 <style
 
+.background {
+    background-image: url('https://i.ibb.co/hV7NXbc/Stopwatch-1.jpg');
+    background-size: cover;
+}
 
-
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #b22627;
+}
 .copyright {
     text-decoration: none;
     horizontal-align: top;
