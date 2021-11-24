@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html>
-
-
-
 <div class="background">
 
     <head>
         <meta charset="utf-8" />
         <title>stop-the-watch</title>
         <link rel="stylesheet" href="main.css">
-        <div class="about"> About</div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="hi.js"></script>
-        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
+        <a href="about.html"> <div class="about"> About</div> </a>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                window.onload = function () {
 
-    </head>
+                    var seconds = 00;
+                    var tens = 00;
+                    var appendTens = document.getElementById("tens")
+                    var appendSeconds = document.getElementById("seconds")
+                    var buttonStart = document.getElementById('button-start');
+                    var buttonStop = document.getElementById('button-stop');
+                    var buttonReset = document.getElementById('button-reset');
+                    var Interval;
+
+                    buttonStart.onclick = function () {
+
+                        clearInterval(Interval);
+                        Interval = setInterval(startTimer, 10);
+                    }
+
+                    buttonStop.onclick = function () {
+                        clearInterval(Interval);
+                    }
+
+
+                    buttonReset.onclick = function () {
+                        clearInterval(Interval);
+                        tens = "00";
+                        seconds = "00";
+                        appendTens.innerHTML = tens;
+                        appendSeconds.innerHTML = seconds;
+                    }
+
+
+
+                    function startTimer() {
+                        tens++;
+
+                        if (tens <= 9) {
+                            appendTens.innerHTML = "0" + tens;
+                        }
+
+                        if (tens > 9) {
+                            appendTens.innerHTML = tens;
+
+                        }
+
+                        if (tens > 99) {
+                            console.log("seconds");
+                            seconds++;
+                            appendSeconds.innerHTML = "0" + seconds;
+                            tens = 0;
+                            appendTens.innerHTML = "0" + 0;
+                        }
+
+                        if (seconds > 9) {
+                            appendSeconds.innerHTML = seconds;
+                        }
+
+                    }
+
+
+                }
+            </script>
+</head>
 
 
     <body>
@@ -24,10 +79,20 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
         <p><span id="seconds">00</span><span>:</span><span id="tens">00</span></p>
         <br>
         <button id="button-start" class="stop">Start</button>
+        <br>
+        <button id="button-stop" class="stop">Stop</button>
         <br>
         <button id="button-reset" class="stop">Clear</button>
 
