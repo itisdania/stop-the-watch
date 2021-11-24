@@ -1,10 +1,16 @@
 <style>
 
-.about{
- font-size: 10vw
-
+span {
+ font-size: 10vw;
+ font:white;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	background-image: url('https://i.ibb.co/hV7NXbc/Stopwatch-1.jpg');
+	background-size: cover;
+}
 
 
 
