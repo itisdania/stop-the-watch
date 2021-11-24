@@ -1,8 +1,8 @@
-<style>
+<style >
 
 .background {
-    background-image: url('https://i.ibb.co/hV7NXbc/Stopwatch-1.jpg');
-    background-size: cover;
+    background-color:black;
+
 }
 
 p{
@@ -60,7 +60,7 @@ margin-right:10px;
 * {
     margin: 0;
     padding: 0;
-    background-image:      url('https://i.ibb.co/hV7NXbc/Stopwatch-1.jpg');
+    background-color:black;
     background-size: cover;}
 
 
