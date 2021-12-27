@@ -6,7 +6,6 @@
         <meta charset="utf-8" />
         <title>stop-the-watch</title>
         <link rel="stylesheet" href="main.css">
-        <a href="about.html"> <div class="about"> About</div> </a>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             window.onload = function () {
@@ -18,6 +17,7 @@
                 var buttonStart = document.getElementById('button-start');
                 var buttonStop = document.getElementById('button-stop');
                 var buttonReset = document.getElementById('button-reset');
+                var buttonAbout = document.getElementById('button-about');
                 var Interval;
 
                 buttonStart.onclick = function () {
@@ -30,6 +30,9 @@
                     clearInterval(Interval);
                 }
 
+                buttonAbout.onclick = function () {
+                    location.href = 'about.html';
+                }
 
                 buttonReset.onclick = function () {
                     clearInterval(Interval);
@@ -38,6 +41,9 @@
                     appendTens.innerHTML = tens;
                     appendSeconds.innerHTML = seconds;
                 }
+
+                
+
 
 
 
@@ -90,11 +96,14 @@
 
         <p><span id="seconds">00</span><span>:</span><span id="tens">00</span></p>
         <br>
-        <button id="button-start" class="stop">Start</button>
+        <button id="button-start" class="stop design">Start</button>
         <br>
-        <button id="button-stop" class="stop">Stop</button>
+        <button id="button-stop" class="stop design">Stop</button>
         <br>
-        <button id="button-reset" class="stop">Clear</button>
+        <button id="button-reset" class="stop design">Clear</button>
+        <br>
+        <button id="button-about" class="stop design">About</button>
+
 
         <div class="copyright">Copyright &copy; 2021 Dania Al-Hakim </div>
 
